@@ -26,7 +26,7 @@
 		}
 	} else {
 		$con->close();
-		header("Location: ../public/dash.php"); /* Redirect browser */
+		header("Location: ../Auth/register.php"); /* Redirect browser */
 		exit();
 	}
 	$con->close();

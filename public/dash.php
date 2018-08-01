@@ -1,8 +1,5 @@
-<?php 
+<?php
 session_start();
-if (!isset($_SESSION["user_id"])){
-	header("Location: ../");
-}
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +14,5 @@ if (!isset($_SESSION["user_id"])){
 		<br>
 		<?php include '../system/check_user.php'; ?>
 	</center>
-	<?php include '../system/user_menu.php'; ?>
 </body>
 </html>
