@@ -25,7 +25,7 @@
 			# code...
 			?>
 			<ul class="nav">
-				<li class="active">
+				<li>
 						<a href="../public/create_training.php">
 								<i class="pe-7s-note2"></i>
 								<p>Create Session</p>

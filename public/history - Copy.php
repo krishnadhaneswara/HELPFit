@@ -84,69 +84,14 @@ if (!isset($_SESSION["user_id"]))
                 </class>
             </div>
 						<?php include '../system/check_user.php'; ?>
-						<?php
-							$Check=$_SESSION["User_type"];
-							if ($Check>=0){
-								# code...
-								if ($Check==2) {
-									# code...
-									?>
-									<li>
-												<a href="../public/history.php">
-														<i class="pe-7s-user"></i>
-														<p>Session History</p>
-												</a>
-										</li>
-										<li class="active-pro">
-												<a href="../system/logout.php">
-														<i class="pe-7s-power"></i>
-														<p>Log Out</p>
-												</a>
-										</li>
-									</ul>
-									<?php
-								}
-
-								if ($Check==1) {
-									# code...
-									?>
-									<ul class="nav">
-										<li>
-												<a href="../public/create_training.php">
-														<i class="pe-7s-note2"></i>
-														<p>Create Session</p>
-												</a>
-										</li>
-										<li  class="active">
-													<a href="../public/history.php">
-															<i class="pe-7s-note2"></i>
-															<p>Session History</p>
-													</a>
-											</li>
-										<li>
-												<a href="../public/profile.php?This=<?php echo $_SESSION["User_type"]; ?>">
-														<i class="pe-7s-user"></i>
-														<p>User Profile</p>
-												</a>
-										</li>
-										<li class="active-pro">
-												<a href="../system/logout.php">
-														<i class="pe-7s-power"></i>
-														<p>Log Out</p>
-												</a>
-										</li>
-									</ul>
-									<?php
-								}
-							}
-						?>
+						<?php include '../system/user_menu.php'; ?>
     	</div>
     </div>
     <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="dash.php"><b>HELP</b>Fit</a>
+                    <a class="navbar-brand" href="#"><b>HELP</b>Fit</a>
                 </div>
             </div>
         </nav>
@@ -167,7 +112,7 @@ if (!isset($_SESSION["user_id"]))
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Past Training Session</h4>
+                                <h4 class="title">Available Training Session</h4>
                             </div>
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped table-list-search">

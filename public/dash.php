@@ -91,7 +91,7 @@ if (!isset($_SESSION["user_id"]))
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#"><b>HELP</b>Fit</a>
+                    <a class="navbar-brand" href="dash.php"><b>HELP</b>Fit</a>
                 </div>
             </div>
         </nav>
