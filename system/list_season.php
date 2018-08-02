@@ -1,21 +1,6 @@
 <?php
   include '../conf/conn.php';
-  ?>
-
-  <table border="2">
-    <tr>
-      <th>
-        ID
-      </th>
-      <th>
-        Seassion name
-      </th>
-      <th>
-        #
-      </th>
-    </tr>
-    <?php
-      $query = "SELECT * FROM training_session WHERE status=0";
+      $query = "SELECT * FROM training_session WHERE status!=0";
       $result = mysqli_query($con,$query);
 
       if (!$result) {
@@ -25,19 +10,14 @@
 
       while($row = mysqli_fetch_array($result)) {
         // code...
+        echo "<tr>";
+      	echo "<td>".$row['training_session_id']."</td>";
+      	echo "<td>".$row['title']."</td>";
+        echo "<td>";
         ?>
-        <td>
-          <?php echo $row["training_session_id"]; ?>
-        </td>
-        <td>
-          <?php echo $row["title"]; ?>
-        </td>
-        <td>
-          <button type="button" name="button">More Info</button>
-        </td>
+        <a href="../public/info.php?This=<?php echo $row['training_session_id']; ?>">More Info</a>
         <?php
+        echo "</td>";
+      	echo "</tr>";
       }
-    ?>
-  </table>
-  <?php
 ?>

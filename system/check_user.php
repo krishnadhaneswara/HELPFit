@@ -1,4 +1,5 @@
-<?php 
+<!-- <link href="../style/style.css" rel="stylesheet" type="text/css" media="all" /> -->
+<?php
 	include '../conf/conn.php';
 
 	$user_id = $_SESSION["user_id"];
@@ -34,15 +35,19 @@
 		if ($Check==2) {
 			# code...
 			?>
-				<a href="../Auth/register_trainer.php">  Become trainer  </a>
+				<a href="../Auth/register_trainer.php">  Become Trainer  </a>
 			<?php
 		}
 
 		if ($Check==3) {
 			# code...
 			?>
-				<a href="../Auth/register_member.php">  Become Member  |</a>
-				<a href="../Auth/register_trainer.php">  Become trainer  </a>
+				<ul class="nav-login">
+					<li><a href="../Auth/register_member.php">Become Member</a></li>
+					<li><a href="../Auth/register_trainer.php">Become Trainer</a></li>
+				</ul>
+				<!-- <a href="../Auth/register_member.php">  Become Member  |</a>
+				<a href="../Auth/register_trainer.php">  Become trainer  </a> -->
 			<?php
 		}
 	}
