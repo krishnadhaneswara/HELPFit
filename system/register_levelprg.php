@@ -3,7 +3,7 @@
 	$user_id = $_SESSION["user_id"];;
 	$level = $_POST["level"];
 	$count = 0;
-	
+
 	include '../conf/conn.php';
 
 	$sql = "INSERT INTO member (user_id, level)
@@ -17,6 +17,12 @@
 		# code...
 		if ($con->query($sql) === TRUE) {
 			echo "New record created successfully";
+
+			$_SESSION["User_type"]=2;
+			while ($row = $result->fetch_assoc()) {
+				# code...
+				$_SESSION["Member_id"]=$row["member_id"];
+			}
 		    header("Location: ../public/dash.php"); /* Redirect browser */
 			exit();
 		} else {

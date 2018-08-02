@@ -3,7 +3,7 @@
 	$user_id = $_SESSION["user_id"];;
 	$speciality = $_POST["speciality"];
 	$count = 0;
-	
+
 	include '../conf/conn.php';
 
 	$sql = "INSERT INTO trainer (user_id, speciality)
@@ -17,7 +17,13 @@
 		# code...
 		if ($con->query($sql) === TRUE) {
 			echo "New record created successfully";
-		    header("Location: ../public/dash.php"); /* Redirect browser */
+
+			$_SESSION["User_type"]=1;
+			while ($row = $result->fetch_assoc()) {
+				# code...
+				$_SESSION["Trainer_id"]=$row["trainer_id"];
+			}
+		    header("Location: ../public/dash1.php"); /* Redirect browser */
 			exit();
 		} else {
 			echo "Error: " . $sql . "<br>" . $con->error;

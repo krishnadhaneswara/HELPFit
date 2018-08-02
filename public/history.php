@@ -91,7 +91,9 @@ if (!isset($_SESSION["user_id"]))
 								if ($Check==2) {
 									# code...
 									?>
-									<li>
+									<ul class="nav">
+
+									<li class="active">
 												<a href="../public/history.php">
 														<i class="pe-7s-user"></i>
 														<p>Session History</p>

@@ -23,9 +23,10 @@
 		}
 	} else {
 		$con->close();
-		header("Location: ../Auth/login.php"); /* Redirect browser */
+		header("Location: ../index.php"); /* Redirect browser */
 		exit();
 	}
+	$count3=0;
 
 	$count2=0;
 	$query = "SELECT * FROM trainer WHERE user_id = '$user_id'";
@@ -39,8 +40,9 @@
 			# code...
 			$_SESSION["Trainer_id"]=$row["trainer_id"];
 		}
+		$count3=1;
 		$con->close();
-		header("Location: ../public/dash.php");
+		header("Location: ../public/history.php");
 	}
 
 	$count2=0;
@@ -54,10 +56,16 @@
 			# code...
 			$_SESSION["Member_id"]=$row["member_id"];
 		}
-		$con->close();
-		header("Location: ../public/dash.php");
-	}else{
+		$count3=1;
 		$con->close();
 		header("Location: ../public/dash.php");
 	}
+
+	if ($count3==0) {
+		# code...
+		$con->close();
+		header("Location: ../public/dash1.php");
+	}
+
+
 ?>
