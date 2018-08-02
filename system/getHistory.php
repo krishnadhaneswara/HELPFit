@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include '../conf/conn.php';
 
   if ($_SESSION["User_type"]==1) {
@@ -64,8 +64,8 @@
       while($row = mysqli_fetch_array($resultP)) {
         // code...
         $This=$row["training_session_id"];
-        $query2 = "SELECT trainer.trainer_id, user.fullname, user.email 
-          FROM trainer 
+        $query2 = "SELECT *
+          FROM trainer
           INNER JOIN training_session ON training_session.trainer_id=trainer.trainer_id
           INNER JOIN user ON user.user_id=trainer.user_id
           WHERE training_session.training_session_id=$This";
@@ -80,6 +80,18 @@
           <td>
             <?php echo $row["training_session_id"]; ?>
           </td>
+					<?php while ( $row2 = mysqli_fetch_array($result2)) {
+            ?>
+					<td>
+            <?php echo $row2["title"]; ?>
+          </td>
+          <td>
+            <?php echo $row2["the_date"]; ?>
+          </td>
+          <td>
+            <?php echo $row2["the_time"]; ?>
+          </td>
+					<?php } ?>
           <td>
             <?php echo $row["notes"]; ?>
           </td>
@@ -93,7 +105,7 @@
           </td>
           <td>
             <a href="../public/UpdatePersonal.php?This=<?php echo $row['training_session_id']; ?>">
-              Update
+              Review
             </a>
           </td>
         <?php
@@ -102,7 +114,7 @@
       while($row = mysqli_fetch_array($resultG)) {
         // code...
         $This=$row["training_session_id"];
-        $query2 = "SELECT * 
+        $query2 = "SELECT *
           FROM  trainer
           INNER JOIN training_session ON trainer.trainer_id = training_session.trainer_id
           INNER JOIN user ON user.user_id = trainer.user_id
@@ -118,7 +130,19 @@
           <td>
             <?php echo $row["training_session_id"]; ?>
           </td>
+					<?php while ( $row2 = mysqli_fetch_array($result2)) {
+            ?>
+					<td>
+            <?php echo $row2["title"]; ?>
+          </td>
           <td>
+            <?php echo $row2["the_date"]; ?>
+          </td>
+          <td>
+            <?php echo $row2["the_time"]; ?>
+          </td>
+				<?php } ?>
+					<td>
             <?php echo $row["class_type"]; ?>
           </td>
           <td>
@@ -136,5 +160,5 @@
           </td>
         <?php
       }
-    }  
+    }
     ?>

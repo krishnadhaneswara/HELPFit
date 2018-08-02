@@ -175,8 +175,9 @@ if (!isset($_SESSION["user_id"]))
                                 <table class="table table-hover table-striped table-list-search">
                                     <thead>
                                       <th>Session No.</th>
-                                    	<th>Session Name</th>
-                                    	<th>Action</th>
+                                    	<th>Comment</th>
+                                    	<th>Trainer Name</th>
+																			<th>Action</th>
                                     </thead>
 																		<?php include '../system/getHistory.php'; ?>
 																	</table>
