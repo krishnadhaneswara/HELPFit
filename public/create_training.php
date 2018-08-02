@@ -19,17 +19,10 @@
 			<a href="create_training.php?create=Personal">Create Personal</a>
 		<?php } ?>
 		</center>
-		<?php if (!isset($_GET["create"])): ?>
-			<center>
-				<a href="create_training.php?create=Group"></a>
-				<a href="create_training.php?create=Personal"></a>
-			</center>
-		<?php endif; ?>
 
 		<center>
-
 			<?php if (isset($_GET["create"])): ?>
-				<form class="" action="index.html" method="post">
+				<form class="" action="../system/create_trainingprg.php" method="post">
 					<table>
 						<tr>
 							<td>title</td>
@@ -52,18 +45,17 @@
 							<td><input type="number" name="fee" id="fee"></td>
 						</tr>
 						<?php if ($_GET["create"]=="Group"): ?>
-							<tr>
-								<td>status</td>
-								<td>:</td>
-							</tr>
+							<input type="hidden" name="status" value="2">
+							<td>max participant</td>
+							<td>:</td>
+							<td><input type="number" name="max_participant" id="max_participant"></td>
 						<?php endif; ?>
 						<?php if ($_GET["create"]=="Personal"): ?>
-							<tr>
-								<td>status</td>
-								<td>:</td>
-							</tr>
+							<input type="hidden" name="status" value="1">
+							<input type="hidden" name="max_participant" value="1">
 						<?php endif; ?>
 					</table>
+					<input type="submit" name="submit" value="submit">
 				</form>
 			<?php endif; ?>
 		</center>
