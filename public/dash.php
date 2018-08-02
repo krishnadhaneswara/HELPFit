@@ -8,7 +8,7 @@ if (!isset($_SESSION["user_id"]))
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="icon" href="../images/icon.png" type="image/png">
+    <link rel="icon" href="../images/icon-Google-Fit.png" type="image/png">
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>HELP.Fit</title>
