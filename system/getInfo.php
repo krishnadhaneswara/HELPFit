@@ -13,7 +13,7 @@
 	<?php while($row = mysqli_fetch_array($result)) {
         // code...
         $This=$row["trainer_id"];
-        $query2 = "SELECT trainer.trainer_id, user.fullname, user.email FROM trainer
+        $query2 = "SELECT * FROM trainer
         INNER JOIN user ON user.user_id=trainer.user_id WHERE trainer_id=$This";
 	    $result2 = mysqli_query($con,$query2);
 	    if (!$result2) {
@@ -29,10 +29,9 @@
             <?php echo $row["title"]; ?>
           </td>
           <td>
-            <?php
-            while ( $row2 = mysqli_fetch_array($result2)) {
-            	# code...
-            	echo $row2["fullname"];
+            <?php while ( $row2 = mysqli_fetch_array($result2)) {?>
+            <a href="../public/profile.php?This=<?php echo $row2["trainer_id"]; ?>"><?php echo $row2["fullname"]; ?></a>
+            <?php	
             }?>
           </td>
         <?php

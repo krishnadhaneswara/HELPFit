@@ -73,31 +73,6 @@ if (!isset($_SESSION["user_id"]))
     </script>
 </head>
 <body>
-	<div class="modal fade" id="modalP" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content modal-info">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				</div>
-				<div class="modal-body modal-spa">
-					<div class="login-grids">
-							<div class="login-right">
-								<form method="post" action="../system/create_trainingprg.php">
-									<h3>Create Group Session </h3>
-									<input type="text" placeholder="Enter Session Title" name="title" id="title" required=""></br></br>
-									<input type="date" placeholder="Enter Date" name="date" id="date" required="">
-									<input type="time" placeholder="Enter Time" name="time" id="time" required="">
-									<input type="text" placeholder="Session Fee" name="fee" id="fee" required="">
-									<input type="hidden" name="status" value="1">
-									<input type="hidden" name="max_participant" value="1">
-									<input type="submit" value="CREATE GROUP SESSION" >
-								</form>
-							</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 <div class="wrapper">
     <div class="sidebar" data-color="orange" data-image="assets/img/sidebar-6.jpg">
     	<div class="sidebar-wrapper">
@@ -200,7 +175,7 @@ if (!isset($_SESSION["user_id"]))
                                     <thead>
                                       <th>Session No.</th>
                                     	<th>Session Name</th>
-                                    	<th>Action</th>
+                                    	<th>Trainer</th>
                                     </thead>
 <?php
 include "../conf/conn.php";

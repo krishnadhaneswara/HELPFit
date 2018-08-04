@@ -16,9 +16,10 @@ while($row = mysqli_fetch_array($result)){
 		?>
 		<form method='post' action='../system/joinprg.php'>
 			<tr>
-				<td>Note</td>
 				<td><input type="text" name="note" id="note"></td>
 				<input type="hidden" name="this" value="<?php echo $training_session_id; ?>" >
+			</tr>
+			<tr>
 				<td><input type="submit" name="submit"></td>
 			</tr>
 		</form>

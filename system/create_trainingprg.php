@@ -9,12 +9,13 @@
     $status = $_POST["status"];
     $trainer_id = $_SESSION["Trainer_id"];
     $max_participant = $_POST["max_participant"];
-
+    
   	include '../conf/conn.php';
 
   	$sql = "INSERT INTO training_session (title, the_date, the_time, fee, status, trainer_id, max_participant)
   		VALUES ('$title', '$the_date', '$the_time', '$fee', '$status', '$trainer_id', 
       '$max_participant')";
+    //echo $sql;
 
 		if ($con->query($sql) === TRUE) {
 			echo "New record created successfully";
@@ -22,7 +23,7 @@
 			exit();
 		} else {
 			echo "Error: " . $sql . "<br>" . $con->error;
-		    header("Location: ../public/create_training.php"); /* Redirect browser */
+		  //header("Location: ../public/create_training.php"); /* Redirect browser */
 			exit();
 		}
   	$con->close();
@@ -30,5 +31,4 @@
     // code...
     header("Location; ../public/dash.php");
   }
-
 ?>

@@ -52,6 +52,9 @@
             <?php echo $row["the_time"]; ?>
           </td>
           <td>
+            <?php echo $row["fee"]; ?>
+          </td>
+          <td>
             <a href="../public/Update.php?This=<?php echo $row['training_session_id']; ?>">
               Update
             </a>
@@ -91,6 +94,11 @@
           <td>
             <?php echo $row2["the_time"]; ?>
           </td>
+          <td>
+            <a href="../public/profile.php?This=<?php echo $row2['trainer_id']; ?>">
+              <?php echo $row2["fullname"]; ?>
+            </a>
+          </td>
 					<?php } ?>
           <td>
             <?php echo $row["notes"]; ?>
@@ -98,15 +106,7 @@
           <td>
             <?php while ( $row2 = mysqli_fetch_array($result2)) {
             ?>
-            <a href="../public/profile.php?This=<?php echo $row2['trainer_id']; ?>">
-              <?php echo $row2["fullname"]; ?>
-            </a>
             <?php } ?>
-          </td>
-          <td>
-            <a href="../public/UpdatePersonal.php?This=<?php echo $row['training_session_id']; ?>">
-              Review
-            </a>
           </td>
         <?php
       }
@@ -152,11 +152,6 @@
               <?php echo $row2["fullname"]; ?>
             </a>
           <?php } ?>
-          </td>
-          <td>
-            <a href="../public/UpdateGroup.php?This=<?php echo $row['training_session_id']; ?>">
-              Update
-            </a>
           </td>
         <?php
       }

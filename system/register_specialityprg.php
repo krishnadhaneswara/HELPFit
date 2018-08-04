@@ -23,7 +23,7 @@
 				# code...
 				$_SESSION["Trainer_id"]=$row["trainer_id"];
 			}
-		    header("Location: ../public/dash1.php"); /* Redirect browser */
+		    header("Location: ../public/dash.php"); /* Redirect browser */
 			exit();
 		} else {
 			echo "Error: " . $sql . "<br>" . $con->error;

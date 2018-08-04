@@ -174,37 +174,39 @@ if (!isset($_SESSION["user_id"]))
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped table-list-search">
                                     <thead>
-                                      <th>Session No.</th>
-                                    	<th>Comment</th>
-                                    	<th>Trainer Name</th>
-																			<th>Action</th>
+                                        <th>Session No.</th>
+                                    	<th>Session Name</th>
+                                    	<th>Session Date</th>
+                                        <th>Session time</th>
+                                        <th>Trainer Name</th>
+										<th>Personal Note</th>
                                     </thead>
-																		<?php include '../system/getHistory.php'; ?>
-																	</table>
-																	</div>
-																	</div>
-																	</div>
-																	</div>
-																	</div>
-																	</div>
-																	<footer class="footer">
-																	<div class="container-fluid">
-																	<nav class="pull-left">
-																	<ul>
-																	<li>
-																	</li>
-																	</nav>
-																	<p class="copyright pull-right">
-																	&copy; 2016 HELPFit
-																	</p>
-																	</div>
-																	</footer>
-																	</body>
-																	<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-																	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-																	<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
-																	<script src="assets/js/chartist.min.js"></script>
-																	<script src="assets/js/bootstrap-notify.js"></script>
-																	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-																	<script src="assets/js/light-bootstrap-dashboard.js"></script>
-																	</html>
+									<?php include '../system/getHistory.php'; ?>
+								</table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+        <div class="container-fluid">
+        <nav class="pull-left">
+        <ul>
+        <li>
+        </li>
+        </nav>
+        <p class="copyright pull-right">
+        &copy; 2016 HELPFit
+        </p>
+        </div>
+        </footer>
+        </body>
+    <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+    <script src="assets/js/chartist.min.js"></script>
+    <script src="assets/js/bootstrap-notify.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="assets/js/light-bootstrap-dashboard.js"></script>
+</html>

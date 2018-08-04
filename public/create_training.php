@@ -56,15 +56,15 @@ if (!isset($_SESSION["user_id"])){
 	        <div class="modal-body modal-spa">
 	          <div class="login-grids">
 	              <div class="login-right">
-	                <form method="post" action="../system/create_trainingprg.php">
+	                <form method="POST" action="../system/create_trainingprg.php">
 	                  <h3>Create Group Session </h3>
 	                  <input type="text" placeholder="Enter Session Title" name="title" id="title" required=""></br></br>
-										<input type="date" placeholder="Enter Date" name="date" id="date" required="">
-										<input type="time" placeholder="Enter Time" name="time" id="time" required="">
-										<input type="text" placeholder="Session Fee" name="fee" id="fee" required="">
-										<input type="hidden" name="status" value="2">
-										<input type="text" placeholder="Input Max Number Participant" name="max_participant" id="max_participant">
-	                  <input type="submit" value="CREATE GROUP SESSION" >
+						<input type="date" placeholder="Enter Date" name="date" id="date" required="">
+						<input type="time" placeholder="Enter Time" name="time" id="time" required="">
+						<input type="text" placeholder="Session Fee" name="fee" id="fee" required="">
+						<input type="hidden" name="status" value="2">
+						<input type="text" placeholder="Input Max Number Participant" name="max_participant" id="max_participant">
+	                  <input type="submit" name="submit" value="CREATE GROUP SESSION" >
 	                </form>
 	              </div>
 	          </div>
@@ -84,11 +84,11 @@ if (!isset($_SESSION["user_id"])){
 	                <form method="post" action="../system/create_trainingprg.php">
 	                  <h3>Create Personal Session </h3>
 	                  <input type="text" placeholder="Enter Session Title" name="title" id="title" required=""></br></br>
-										<input type="date" placeholder="Enter Date" name="date" id="date" required="">
-										<input type="time" placeholder="Enter Time" name="time" id="time" required="">
-										<input type="text" placeholder="Session Fee" name="fee" id="fee" required="">
-										<input type="hidden" name="status" value="1">
-										<input type="hidden" name="max_participant" value="1">
+						<input type="date" placeholder="Enter Date" name="date" id="date" required="">
+						<input type="time" placeholder="Enter Time" name="time" id="time" required="">
+						<input type="text" placeholder="Session Fee" name="fee" id="fee" required="">
+						<input type="hidden" name="status" value="1">
+						<input type="hidden" name="max_participant" value="1">
 	                  <input type="submit" value="CREATE PERSONAL SESSION" >
 	                </form>
 	              </div>
